@@ -1,0 +1,85 @@
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --light-grey: #e0e0e0;
+  --dark-grey: #606060;
+  --red-bg: #da1e5d;
+}
+.root {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 20px;
+  padding: 40px 30px;
+}
+
+/* Nav Button Design */
+.root .nav button {
+  background-color: var(--light-grey);
+  color: var(--dark-grey);
+  padding: 15px 30px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.root .nav .active {
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+}
+
+/* Card Container Design */
+
+/* Layout-1 */
+.root .layout-1 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100px 100px 100px 100px 100px;
+  row-gap: 30px;
+}
+
+/* Layout-2 */
+.root .layout-2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 200px 200px;
+  gap: 30px;
+}
+
+/* Layout-3 */
+.root .layout-3 #card1 {
+  grid-area: header;
+}
+.root .layout-3 #card2 {
+  grid-area: leftside;
+}
+.root .layout-3 #card3 {
+  grid-area: main;
+}
+.root .layout-3 #card4 {
+  grid-area: rightside;
+}
+.root .layout-3 #card5 {
+  grid-area: footer;
+}
+
+.root .layout-3 {
+  display: grid;
+  grid-template-areas: "header header header header header" "leftside main main main rightside" "footer footer footer footer footer";
+  grid-template-rows: 100px 350px 100px;
+  gap: 30px;
+}
+
+/* Card Design */
+.root .container .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red-bg);
+  color: var(--light-grey);
+  font-size: 12px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+}
